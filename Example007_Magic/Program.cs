@@ -1,13 +1,13 @@
 ﻿Console.Clear();
 
-int xa = 40;
+int xa = 50;
 int ya = 1;
 
 int xb = 1;
-int yb = 25;
+int yb = 20;
 
-int xc = 80;
-int yc = 25;
+int xc = 100;
+int yc = 20;
 
 Console.SetCursorPosition(xa, ya);
 Console.WriteLine("+");
@@ -19,7 +19,7 @@ Console.SetCursorPosition(xc, yc);
 Console.WriteLine("+");
 
 int x = xa;
-int y = ya;
+int y = xb;
 int count = 0;
 
 while (count<10000) {
