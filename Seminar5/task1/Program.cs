@@ -40,34 +40,18 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-int[] inputArray = {1, 2, 3, 4, 5};
-int length = inputArray.Length;
-int count = 1;
-int multi;
+int[] inputArray = {6, 7, 3, 6};
+int arrayLength = inputArray.Length;
+int newArrayLength = arrayLength/2+arrayLength%2;
+int[] outputArray = new int[newArrayLength];
 
-int[] outputArray = new int[length/2+length%2];
-for(int i = 0; i<length; i++) {
-	if(i==length-1-i) {
+for(int i = 0; i<newArrayLength; i++) {
+	if(i==arrayLength-1-i) {
 		outputArray[i]=inputArray[i];
 	}
 	else {
-		multi = inputArray[i]*inputArray[length-1-i];
-		outputArray[i]=multi;
+		outputArray[i] = inputArray[i]*inputArray[arrayLength-1-i];
 	}
 }
-Console.WriteLine("Массив: " + String.Join(";", outputArray));
-
-//Работающее решение
-// int [] inputArray= {1,2,3,4,5};
-// int [] resultArray=new int[inputArray.Length/2 + inputArray.Length%2];
-
-// for(int i=0;i<resultArray.Length;i++)
-// {
-//     resultArray[i]= inputArray[i]*inputArray[inputArray.Length-1-i];
-
-//     if(i==(inputArray.Length-1-i))
-//     {
-//         resultArray[i]=inputArray[i];
-//     }
-// }
-// Console.WriteLine(String.Join(",",resultArray));
+Console.WriteLine("Массив: " + String.Join(";", inputArray));
+Console.WriteLine("Массив с произведением элементов: " + String.Join(";", outputArray));
