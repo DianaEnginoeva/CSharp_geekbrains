@@ -134,6 +134,21 @@ string Method4(int count, string text)
 string res = Method4(10, "di");
 Console.WriteLine(res);
 ```
+У функции должен быть тип возвращаемого элемента.
+```
+int[] GetArray(int size, int min, int max) {
+  int[] res = new int[size];
+  for(int i=0; i<size; i++) {
+    res[i] = new Random().Next(min, max+1);
+  }
+  return res;
+}
+```
+«Метод, который возвращает массив, должен иметь тип возвращаемого массива»
+([Источник](http://fb3809fm.bget.ru/_csharp/221.php))
+
+Чтобы вернуть массив, мы пишем [] после int при объявлении функции.
+
 	
 
 
