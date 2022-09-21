@@ -1,0 +1,61 @@
+﻿// Напишите программу, которая заполнит спирально массив 4 на 4. 
+// Например, на выходе получается вот такой массив:
+// 01 02 03 04
+// 12 13 14 05
+// 11 16 15 06
+// 10 09 08 07
+
+int count = 1;
+int i = 0;
+int j = 0;
+int[,] array = new int[4, 4];
+//1
+for(j=0; j<4; j++)
+{
+	array[i, j] = count;
+	count++;
+}
+//2
+j = 3;
+for(i=1; i<4; i++)
+{
+	array[i, j] = count;
+	count++;
+}
+//3
+i = 3;
+for(j=2; j>=0; j--)
+{
+	array[i, j] = count;
+	count++;
+}
+//4
+j = 0;
+for(i=2; i>0; i--)
+{
+	array[i, j] = count;
+	count++;
+}
+//5
+i = 1;
+for(j=1; j<3; j++)
+{
+	array[i, j] = count;
+	count++;
+}
+//6
+i = 2;
+for(j=2; j>0; j--)
+{
+	array[i, j] = count;
+	count++;
+}
+//print
+for (i = 0; i < array.GetLength(0); i++)
+{
+    for (j = 0; j < array.GetLength(1); j++)
+    {
+        Console.Write(array[i,j]+"\t");
+    }
+    Console.WriteLine();
+}
